@@ -39,3 +39,7 @@ Finished conversion 41925 (errors 762)
 
 [41920 rows x 4 columns]
 ```
+
+## TODO
+
+To append IC50 and EC50 values to dataset.
