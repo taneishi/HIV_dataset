@@ -31,7 +31,7 @@ def main():
     print(df.groupby('Conclusion').size().to_dict())
     print(df.groupby('outcome').size().to_dict())
 
-    df.to_csv('data/aids_antiviral.tsv', sep='\t', index=False)
+    df.to_csv('data/hiv.tsv', sep='\t', index=False)
     print(df)
 
 if __name__ == '__main__':
