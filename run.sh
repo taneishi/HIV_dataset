@@ -15,13 +15,6 @@ if [ ! -f data/AIDO99SD.BIN ]; then
     sed -e 's/> <NSC>/M  END\n> <NSC>/g' -i data/AIDO99SD.SDF
 fi
 
-if [ -d pandas ]; then
-    source pandas/bin/activate
-else
-    python3 -m venv pandas
-    source pandas/bin/activate
-    pip install --upgrade pip
-    pip install pandas rdkit-pypi
-fi
+pip install -r requirements.txt
 
 python main.py
