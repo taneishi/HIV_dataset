@@ -10,9 +10,9 @@ Here I described a procedure to create a sample dataset for virtual screening ro
 
 The results of the screening test released in May 2004 placed each compound in one of three categories.
 
-- CA - Confirmed active
-- CM - Confirmed moderately active
-- CI - Confirmed inactive
+- CA - Confirmed Active
+- CM - Confirmed Moderately Active
+- CI - Confirmed Inactive
 
 Each compound is assigned an NSC number, NCI's internal ID, and one of the above categories is registered as a screening test result.
 
