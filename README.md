@@ -1,16 +1,29 @@
-# AIDS Antiviral Screen Data
+# HIV Antiviral Screening Dataset
 
 ## Introduction
 
-This is a procedure for creating an AIDS Antiviral dataset to be used as a sample dataset for virtual screening.
-
-See https://wiki.nci.nih.gov/display/NCIDTPdata/AIDS+Antiviral+Screen+Data
+The National Cancer Institute (NCI) Developmental Therapeutics Program (DTP) AIDS Antiviral Screen has screened approximately 40,000 compounds for anti-HIV activity.
+Chemical structure data for compounds that do not have a non-disclosure agreement are made publicly available.
+Here I described a procedure to create a sample dataset for virtual screening rom HIV Antiviral Screening Dataset.
 
 ## Binary Classiication Labels
+
+The results of the screening test released in May 2004 placed each compound in one of three categories.
 
 - CA - Confirmed active
 - CM - Confirmed moderately active
 - CI - Confirmed inactive
+
+Each compound is assigned an NSC number, NCI's internal ID, and one of the above categories is registered as a screening test result.
+
+## EC50 and IC50
+
+There is also data on the concentration needed to see the protective effect against infected cells (EC50),
+where EC50 is the base 10 logarithm of the concentration of the compound that protects 50% from infected cells.
+There are also data on the concentration needed to inhibit the growth of uninfected cells (IC50).
+IC50 is the concentration of the compound that inhibits the growth of uninfected cells by 50%.
+Resulting data are determined from individual dose-response curves and are synthesized by trained researchers;
+EC50 and IC50 data are computer-generated averages and do not necessarily reflect all considerations in making a determination.
 
 ## Usage
 
@@ -40,6 +53,10 @@ Finished conversion 41925 (errors 762)
 [41920 rows x 4 columns]
 ```
 
+## References
+
+- [NCI DTP Data](https://wiki.nci.nih.gov/display/NCIDTPdata/AIDS+Antiviral+Screen+Data)
+
 ## TODO
 
-To append IC50 and EC50 values to dataset.
+- IC50 and EC50 values.
