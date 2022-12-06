@@ -26,10 +26,10 @@ def main():
 
     df = pd.merge(df, smiles, on='NSC')
 
-    df['outcome'] = (df['Conclusion'] != 'CI').astype(int)
+    df['interaction'] = (df['Conclusion'] != 'CI').astype(int)
 
     print(df.groupby('Conclusion').size().to_dict())
-    print(df.groupby('outcome').size().to_dict())
+    print(df.groupby('interaction').size().to_dict())
 
     df.to_csv('data/hiv.tsv', sep='\t', index=False)
     print(df)
