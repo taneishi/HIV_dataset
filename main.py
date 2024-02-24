@@ -11,7 +11,7 @@ def main():
             smi = Chem.MolToSmiles(mol)
             nsc = int(mol.GetProp('NSC').strip())
             smiles.append([nsc, smi])
-            print('\rConverting MOL to SMILES: %5d (errors %3d)' % (len(smiles), errors), end='')
+            print(f'\rConverting MOL to SMILES: {len(smiles):5d} (errors {errors:3d})', end='')
         except Exception as e:
             errors += 1
 
