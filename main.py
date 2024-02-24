@@ -6,7 +6,7 @@ RDLogger.DisableLog('rdApp.*')
 def main():
     smiles = []
     errors = 0
-    for mol in Chem.SDMolSupplier('data/AIDO99SD.SDF'):
+    for mol in Chem.SDMolSupplier('data/structures.sdf'):
         try:
             smi = Chem.MolToSmiles(mol)
             nsc = int(mol.GetProp('NSC').strip())
@@ -19,7 +19,7 @@ def main():
     
     smiles = pd.DataFrame(smiles, columns=['NSC', 'smi'])
 
-    df = pd.read_csv('data/aids_conc_may04.txt', sep=',')
+    df = pd.read_csv('data/conclusions.csv')
 
     df.columns = df.columns.str.strip()
     df['Conclusion'] = df['Conclusion'].str.strip()
